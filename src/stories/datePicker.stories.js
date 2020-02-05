@@ -5,14 +5,14 @@ import './datePicker.css'; export default { title: 'Date Picker', component: dat
 export const Parameters = () => (
     <table>
       <tr>
-        <th>Sr. No.</th>
-        <th>Names</th>
+        <th>S. No.</th>
+        <th>Name</th>
         <th>Purpose</th>
         <th>Possible Values</th>
       </tr>
       <tr>
         <td>1</td>
-        <td>Date String Alignment</td>
+        <td>dateStringAlignment</td>
         <td>Allows alignment of date either to left or right</td>
         <td>
           <p>Left, Right
