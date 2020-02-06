@@ -39,8 +39,10 @@
     "@storybook/addon-actions": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.12",
     "@storybook/addon-links": "^5.3.10",
+    "@storybook/addon-notes": "^5.3.12",
     "@storybook/addons": "^5.3.10",
     "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.10"
+    "@storybook/react": "^5.3.10",
+    "react-markdown": "^4.3.1"
   }
 }

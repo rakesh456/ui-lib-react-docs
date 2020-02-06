@@ -1,9 +1,15 @@
 import React from 'react'; //import { action } from '@storybook/addon-actions'; 
 import { datePicker } from '@storybook/react/demo';
-import './datePicker.css'; export default { title: 'Date Picker', component: datePicker, };
+import {storiesOf} from "@storybook/react"
+
+import './datePicker.css'; 
+import markdownNotes from "../markdowns/tables.markdown.md";
+import "bootstrap/dist/css/bootstrap.min.css";
+export default { title: 'Date Picker', component: datePicker, };
 
 export const Parameters = () => (
-    <table>
+<datePicker>{markdownNotes}</datePicker>
+   /*  <table>
       <tr>
         <th>Sr. No.</th>
         <th>Names</th>
@@ -12,7 +18,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>1</td>
-        <td>Date String Alignment</td>
+        <td>dateStringAlignment</td>
         <td>Allows alignment of date either to left or right</td>
         <td>
           <p>Left, Right
@@ -22,15 +28,15 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>2</td>
-        <td>Date Button Primary</td>
-        <td></td>
+        <td>dateButtonPrimary</td>
+        <td>This shows primary buttons if showButtons parameter is enabled</td>
         <td>
-          <p></p>
+          <p>Default: OK</p>
         </td>
       </tr>
       <tr>
         <td>3</td>
-        <td>Display Format</td>
+        <td>displayFormat</td>
         <td>Format in which the date input should be accepted. This will depend upon the setting of “Display Unit”</td>
         <td>
           <p>MM/DD/YYYY, ,DD/MM/YYYY, M (&Y)Q (&Y) and Y
@@ -40,7 +46,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>4</td>
-        <td>Disabled List</td>
+        <td>disabledList</td>
         <td>List of disabled dates</td>
         <td>
           <p>Can have n number of disabled dates.</p>
@@ -48,7 +54,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>5</td>
-        <td>Icon Alignment</td>
+        <td>iconAlignment</td>
         <td>The calendar icon’s display location.</td>
         <td>
           <p>Left, Right
@@ -58,7 +64,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>6</td>
-        <td>Indicator List</td>
+        <td>indicatorList</td>
         <td>List of dates that need to have an indicator against them in display. Each indicator list will have a specific color and a list of dates associated with them</td>
         <td>
           <p>Can be n number of indicator.</p>
@@ -66,7 +72,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>7</td>
-        <td>Is Disabled</td>
+        <td>isDisabled</td>
         <td>Show disabled date picker</td>
         <td>
           <p>Default: False</p>
@@ -74,7 +80,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>8</td>
-        <td>Lower Limit</td>
+        <td>lowerLimit</td>
         <td>Set lower date limit on the datepicker</td>
         <td>
           <p>Start date in given display format.
@@ -84,7 +90,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>9</td>
-        <td>Manual Entry</td>
+        <td>manualEntry</td>
         <td>This will disable to manual date entry.</td>
         <td>
           <p>Default: False</p>
@@ -92,7 +98,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>10</td>
-        <td>Show Buttons</td>
+        <td>showButtons</td>
         <td>Show confirmation buttons below date picker</td>
         <td>
           <p>False and True.
@@ -107,7 +113,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>11</td>
-        <td>Show Clear Icon</td>
+        <td>showClearIcon</td>
         <td>Option to show close button.</td>
         <td>
           <p>Default: False</p>
@@ -115,7 +121,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>12</td>
-        <td>Show Error Message</td>
+        <td>showErrorMessage</td>
         <td>This will show an error message.</td>
         <td>
           <p>Default: True</p>
@@ -123,7 +129,7 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>13</td>
-        <td>Upper Limit</td>
+        <td>upperLimit</td>
         <td>Set upper date limit on the datepicker</td>
         <td>
           <p>End date in given display format
@@ -133,10 +139,23 @@ export const Parameters = () => (
       </tr>
       <tr>
         <td>14</td>
-        <td>Validation Messages</td>
+        <td>validationMessages</td>
         <td>List of validation messages to be shown when validation fails.</td>
         <td>
           <p>Checks Format of the date and if it exceeds the range</p>
         </td>
       </tr>
-    </table>);
+    </table> */
+    );
+const storyFunction = () =>{
+  return(
+      <React.Fragment>
+          <datePicker/>
+      </React.Fragment>
+  )
+}
+
+   storiesOf("UI Components",module)
+.add("Tables",storyFunction,{
+    notes:{markdown:markdownNotes}
+})  
